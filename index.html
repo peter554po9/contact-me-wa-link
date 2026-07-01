@@ -14,7 +14,7 @@ document.getElementById('whatsapp-form').addEventListener('submit', function(e) 
     e.preventDefault();
     var name = document.getElementById('name').value;
     var msg = document.getElementById('message').value;
-    var phoneNumber = '14155552671'; // Replace yours
+    var phoneNumber = '+447894470932'; //
     
     var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(name + '%20-%20' + msg);
     window.open(url, '_blank');
