@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Contact Me</title></head>
+<body>
+<h1>Message Me on WhatsApp!</h1>
+<form id="whatsapp-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <textarea id="message" placeholder="What would you like to discuss?" required></textarea>
+    <button type="submit">Open WhatsApp</button>
+</form>
+
+<script>
+document.getElementById('whatsapp-form').addEventListener('submit', function(e) {
+    e.preventDefault();
+    var name = document.getElementById('name').value;
+    var msg = document.getElementById('message').value;
+    var phoneNumber = '14155552671'; // Replace yours
+    
+    var url = 'https://wa.me/' + phoneNumber + '?text=' + encodeURIComponent(name + '%20-%20' + msg);
+    window.open(url, '_blank');
+});
+</script>
+</body>
+</html>
